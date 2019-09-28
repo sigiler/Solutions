@@ -1,0 +1,46 @@
+@0
+
+
+@1
+MOV UP,DOWN
+
+@2
+
+
+@3
+
+
+@4
+MOV UP,RIGHT
+
+@5
+MOV LEFT,DOWN
+
+@6
+
+
+@7
+
+
+@8
+
+
+@9
+I:  MOV UP,ACC
+    JEZ 10
+N0: MOV 0,DOWN
+    MOV UP,ACC
+    JNZ N0
+10: MOV 0,DOWN
+    MOV UP,ACC
+    JNZ N0
+20: MOV 0,DOWN
+    MOV UP,ACC
+    JNZ N0
+30: MOV 1,DOWN
+    MOV UP,ACC
+    JEZ 30
+    JMP N0
+
+@10
+

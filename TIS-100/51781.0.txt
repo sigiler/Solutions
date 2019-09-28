@@ -1,0 +1,47 @@
+@0
+
+
+@1
+
+
+@2
+
+
+@3
+
+
+@4
+
+
+@5
+
+
+@6
+
+
+@7
+
+
+@8
+LOOP:MOV ACC,RIGHT
+SWP
+MOV ACC,RIGHT
+SWP
+ADD 2
+SUB 30
+JGZ NEXTLINE
+ADD 30
+JMP LOOP
+NEXTLINE: ADD -1
+SWP
+ADD 1
+SWP
+
+@9
+MOV LEFT,DOWN
+MOV LEFT,DOWN
+MOV 3,DOWN
+MOV -1,DOWN
+
+@10
+
