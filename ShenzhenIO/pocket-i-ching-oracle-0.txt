@@ -1,0 +1,94 @@
+[name] New design 1
+[puzzle] Sz017
+[production-cost] 1200
+[power-usage] 262
+[lines-of-code] 27
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+.....95555C...14......
+.....A..156...14......
+....16.955555414......
+....954A148...14......
+....A..A156...14......
+....A15614..9414......
+....354.15556.........
+......................
+......................
+
+[chip] 
+[type] UC6
+[x] 6
+[y] 2
+[code] 
+  slx x3
+  mov x3 dat
+  teq p0 100
++ dst 0 1
+  slp 1
+  teq p0 100
++ dst 1 1
+  slp 1
+  teq p0 100
++ dst 2 1
+#  slp 1
+  mov dat x2
+  mov acc x1
+  mov 0 acc
+
+[chip] 
+[type] BRIDGE
+[x] 9
+[y] 3
+
+[chip] 
+[type] DX3
+[x] 13
+[y] 3
+
+[chip] 
+[type] LCDH
+[x] 15
+[y] 3
+[is-puzzle-provided] true
+
+[chip] 
+[type] ORACLE
+[x] 2
+[y] 5
+[is-puzzle-provided] true
+
+[chip] 
+[type] UC6
+[x] 6
+[y] 5
+[code] 
+l: teq p1 100
+- slp 1
+- jmp l
+  teq p0 100
++ dst 0 1
+  slp 1
+  teq p0 100
++ dst 1 1
+  slp 1
+  teq p0 100
++ dst 2 1
+  slp 1
+  mov acc x2
+  mov 0 acc
+
+[chip] 
+[type] BRIDGE
+[x] 10
+[y] 5
+
+[chip] 
+[type] DX3
+[x] 13
+[y] 6
+

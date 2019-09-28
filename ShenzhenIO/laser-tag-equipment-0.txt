@@ -1,0 +1,71 @@
+[name] New design 1
+[puzzle] Sz048
+[production-cost] 1000
+[power-usage] 880
+[lines-of-code] 20
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+.......95C............
+..9555C34A15554.155C..
+..2..1694A...94.14.2..
+..154156.A...3555554..
+..1555C..3415555555C..
+......A....1C......2..
+......3555556.........
+......................
+......................
+
+[chip] 
+[type] DX3
+[x] 10
+[y] 3
+
+[chip] 
+[type] UC4
+[x] 3
+[y] 5
+[code] 
+  teq p0 100
++ dst 0 1
+  teq p1 100
++ dst 0 0
+  mov acc x1
+  slp 1
+
+[chip] 
+[type] UC4X
+[x] 8
+[y] 6
+[code] 
+  mov x1 acc
+  mov acc x3
+  dst 1 x3
+  mov acc x0
+  slp 1
+
+[chip] 
+[type] UC4
+[x] 14
+[y] 6
+[code] 
+  teq p0 100
++ mov x1 acc
+  teq x0 1
++ teq p1 100
++ tgt acc 0
++ sub 1
++ mov 1 x0
+- mov 0 x0
+  slp 1
+
+[chip] 
+[type] DIAL7
+[x] 17
+[y] 6
+[is-puzzle-provided] true
+

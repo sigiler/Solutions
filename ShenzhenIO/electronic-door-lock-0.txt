@@ -1,0 +1,69 @@
+[name] New design 1
+[puzzle] Sz031
+[production-cost] 1200
+[power-usage] 858
+[lines-of-code] 25
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+......................
+......................
+..1555554.............
+......154.14.14.155C..
+..15555D4.14.14....2..
+......835555554.1C....
+......355555555556....
+......................
+......................
+
+[chip] 
+[type] BRIDGE
+[x] 6
+[y] 3
+
+[chip] 
+[type] UC6
+[x] 14
+[y] 3
+[code] 
+  slx x2
+  mov 0 acc
+  mov 1 dat
+  mov 0 x1
+l: teq x2 9
+- mov 0 dat
+  teq x2 x0
++ teq p0 0
++ add 1
+  teq x1 10
+- jmp l
+  teq acc 10
+- teq dat 1
++ gen p1 6 0
+
+[chip] 
+[type] UC6
+[x] 8
+[y] 4
+[code] 
+  slx x0
+l:  mov x0 dat
+  teq p0 100
++ mov dat x2
+  mov dat x1
+  mov dat x1
+  add 1
+  teq acc 10
+- jmp l
+  mov 0 acc
+  mov 0 x3
+
+[chip] 
+[type] RAM
+[x] 11
+[y] 4
+

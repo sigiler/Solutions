@@ -1,0 +1,52 @@
+[name] New design 1
+[puzzle] Sz024
+[production-cost] 500
+[power-usage] 298
+[lines-of-code] 10
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+......................
+.....1C......1C.8.....
+......A....955756.....
+.....1F54..A.9554.....
+......A94.1696........
+.....16A..156...8.....
+.......3555555556.....
+......................
+......................
+
+[chip] 
+[type] UC6
+[x] 8
+[y] 3
+[code] 
+l:slx x0
+  mov x0 dat
+  tlt dat 100
+- mov dat acc
+  tcp acc x3
++ mov dat x3
++ jmp l
+- mov dat x1
+- jmp l
+  mov dat x2
+
+[chip] 
+[type] ID
+[x] 12
+[y] 7
+[is-puzzle-provided] true
+
+[chip] 
+[type] NOTE
+[x] 18
+[y] 7
+[code] 
+yep this fails in
+ID less than 100
+

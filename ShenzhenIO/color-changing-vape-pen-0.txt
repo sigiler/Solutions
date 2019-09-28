@@ -1,0 +1,69 @@
+[name] New design 1
+[puzzle] Sz010
+[production-cost] 1100
+[power-usage] 693
+[lines-of-code] 17
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+......................
+........95415C........
+........A94..354......
+....14..A3555554......
+.......1694.1554......
+.......156............
+......................
+......................
+......................
+
+[chip] 
+[type] UC6
+[x] 5
+[y] 3
+[code] 
+  mov x0 dat
+  teq dat -999
+- mov dat x3
+- mov x0 x3
+- mov x0 x2
+- mov x0 acc
+loop:  tgt acc 0
+- mov 0 x3
+- mov 0 x3
+- mov 0 x2
+  sub 1
+sleep2: slp 1
+
+[chip] 
+[type] UC4
+[x] 10
+[y] 3
+[code] 
+  slx x0
+  mov x0 p1
+
+[chip] 
+[type] RADIO
+[x] 2
+[y] 4
+[is-puzzle-provided] true
+
+[chip] 
+[type] LEDRGBV
+[x] 15
+[y] 4
+[is-puzzle-provided] true
+
+[chip] 
+[type] UC4
+[x] 10
+[y] 6
+[code] 
+  slx x0
+  mov x0 p1
+  mov x0 p0
+

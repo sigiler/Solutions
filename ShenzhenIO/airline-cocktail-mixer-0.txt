@@ -1,0 +1,114 @@
+[name] New design 1
+[puzzle] Sz020
+[production-cost] 1900
+[power-usage] 243
+[lines-of-code] 28
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+............14.15414..
+............14.1C.14..
+................A.14..
+..155555C9555555E.....
+....14..AA......2.14..
+....14.16A..14.15414..
+.......156..14.14.14..
+......................
+......................
+
+[chip] 
+[type] UC6
+[x] 5
+[y] 2
+[code] 
+  slx x3
+  mov x3 acc
+  sub 1
+  add acc
+  mov acc x1
+  mov x1 x2
+  mov x1 x2
+  mov x0 acc
+  mov acc x2
+  mov acc x2
+  slp acc
+  mov x0 acc
+  mov acc x2
+  mov acc x2
+
+[chip] 
+[type] BANK
+[x] 10
+[y] 2
+[rom] 
+0,0,0,0,110,0,10,0,1,0,100,0,1,0
+
+[chip] 
+[type] UC4X
+[x] 13
+[y] 2
+[code] 
+  slx x2
+  mov x2 x1
+  mov x0 x3
+  slp x2
+  mov x0 x3
+  slp x2
+  mov 0 x3
+
+[chip] 
+[type] BRIDGE
+[x] 16
+[y] 2
+
+[chip] 
+[type] DX3
+[x] 17
+[y] 2
+
+[chip] 
+[type] BANK
+[x] 2
+[y] 3
+[rom] 
+3,0,2,4,2,2,4,0,2,4,2,4,2,4
+
+[chip] 
+[type] DX3
+[x] 17
+[y] 6
+
+[chip] 
+[type] NOTE
+[x] 5
+[y] 7
+[code] 
+optimization
+  remove sub 1
+  14=0 in a1
+  adjust tables
+
+[chip] 
+[type] BANK
+[x] 10
+[y] 7
+[rom] 
+100,0,101,100,100,100,100,100,100,100,10,10,10,10
+
+[chip] 
+[type] UC4X
+[x] 13
+[y] 7
+[code] 
+  slx x2
+  mov x2 x1
+  mov x0 x3
+  slp x2
+  mov x0 x3
+  slp x2
+  mov 0 x3
+

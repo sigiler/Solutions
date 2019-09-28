@@ -1,0 +1,99 @@
+[name] New design  1
+[puzzle] Sz027
+[production-cost] 1500
+[power-usage] 599
+[lines-of-code] 42
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+..955C....14.155555C..
+..2..B54..14.155C..A..
+..8..A154....14.A..A..
+..B54A15555555556..2..
+..A..3548.............
+..A...156.............
+..354.................
+......................
+......................
+
+[chip] 
+[type] UC6
+[x] 4
+[y] 2
+[code] 
+  slx x3
+  mov x3 null
+  teq p1 0
++ mov 600 x3
+  teq p1 20
++ mov 200 x3
+  teq p1 40
++ mov 201 x3
+  teq p1 60
++ mov 202 x3
+  teq p1 80
++ mov 203 x3
+  teq p1 100
++ mov 204 x3
+
+[chip] 
+[type] BRIDGE
+[x] 8
+[y] 4
+
+[chip] 
+[type] UC6
+[x] 4
+[y] 5
+[code] 
+  teq p0 0
++ jmp l
+  tlt p0 51
++ teq p1 0
++ mov 600 acc
+- mov 700 acc
+  tgt p0 79
++ mov 100 acc
+  tgt p0 50
++ tlt p0 80
++ mov 0 x3
++ mov x3 acc
+l:mov acc x2
+  slp 1
+
+[chip] 
+[type] UC6
+[x] 11
+[y] 6
+[code] 
+  mov x0 dat
+  teq dat 2
++ teq x0 x2
++ mov x3 x1
++ jmp b
+  teq dat 1
++ mov x0 acc
+a: mov 50 p1
++ mov x0 p1
+  mov x3 null
+b:slp 1
++ sub 1
++ tgt acc 0
++ jmp a
+
+[chip] 
+[type] ID
+[x] 14
+[y] 6
+[is-puzzle-provided] true
+
+[chip] 
+[type] RADIO
+[x] 8
+[y] 7
+[is-puzzle-provided] true
+

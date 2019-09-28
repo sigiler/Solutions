@@ -1,0 +1,62 @@
+[name] New design 1
+[puzzle] SzSandbox
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+......................
+.....154..............
+..94.154....154.......
+..355554..............
+......................
+......................
+......................
+......................
+......................
+
+[chip] 
+[type] LCDC2
+[x] 7
+[y] 3
+[custom-screen] 
+matrix
+
+[chip] 
+[type] UC4
+[x] 14
+[y] 5
+[code] 
+  mov 10 x0
+  mov 109 x0
+  mov 41 x0
+slp:  slp 1
+  jmp slp
+
+[chip] 
+[type] UC4X
+[x] 3
+[y] 6
+[code] 
+  mov x3 acc
+  tlt acc 0
++ jmp skip
+  mov acc x1
+  teq x1 1
++ mul -1
+  mov acc x2
+skip:
+  slp 1
+
+[chip] 
+[type] NOTE
+[x] 1
+[y] 11
+[code] 
+v1:
+Turn Off Lights
+v2:
+Lights out
+

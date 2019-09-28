@@ -1,0 +1,65 @@
+[name] New design 1
+[puzzle] Sz011
+[production-cost] 1100
+[power-usage] 852
+[lines-of-code] 18
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+....95555554..........
+....A.....94.14.......
+....A.....A..14.......
+....A.....A...........
+....34.1C.34.155C.....
+....94..A.94....A.....
+....34156.3555542.....
+......................
+......................
+
+[chip] 
+[type] UC4
+[x] 5
+[y] 3
+[code] 
+  mov p0 x0
+  mov p1 x0
+  slp 1
+
+[chip] 
+[type] UC4
+[x] 11
+[y] 3
+[code] 
+  mov 0 acc
+  teq p0 100
++ add 1
+  teq p1 100
++ add 2
+  mov acc x0
+  slp 1
+
+[chip] 
+[type] UC6
+[x] 11
+[y] 6
+[code] 
+  teq x2 -1
++ mov x0 x3
++ mov x0 x3
++ mov x1 x3
+- mov x0 acc
+- mov x0 acc
+- mov x1 acc
+  slp 1
+
+[chip] 
+[type] RADIO
+[x] 14
+[y] 6
+[rotated] true
+[is-puzzle-provided] true
+

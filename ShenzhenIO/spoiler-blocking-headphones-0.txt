@@ -1,0 +1,80 @@
+[name] New design 1
+[puzzle] Sz019
+[production-cost] 1500
+[power-usage] 2324
+[lines-of-code] 27
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+.....15554.1555C......
+.....1C....155CA......
+......3554.1C.A35C....
+........95556.3C.A....
+...154.16..1554A.2....
+...........1554354....
+......................
+......................
+......................
+
+[chip] 
+[type] UC6
+[x] 14
+[y] 2
+[code] 
+s:slx x3
+  mov x3 acc
+  mov x3 dat
+  mov 0 x1
+l:teq x0 acc
+- mov x0 null
++ teq x0 dat
++ jmp y
+  tlt x1 12
++ jmp l
+n:mov 0 x3
+  jmp s
+y:mov 1 x3
+
+[chip] 
+[type] BANK
+[x] 9
+[y] 3
+[rom] 
+711,573,495,160,575,645,712,917,356,361,138,420,0,0
+
+[chip] 
+[type] UC4
+[x] 5
+[y] 4
+[code] 
+  teq p0 100
++ mov 1 x1
+- mov 0 x1
+  slp 1
+
+[chip] 
+[type] UC6
+[x] 9
+[y] 6
+[code] 
+  mov x0 x3
+  mov x0 x3
+  teq x3 1
++ mov 1 dat
+  teq x2 1
++ mov 0 dat
+  teq dat 0
++ mov p0 p1
+- mov 50 p1
+  slp 1
+
+[chip] 
+[type] NLP
+[x] 3
+[y] 7
+[is-puzzle-provided] true
+
